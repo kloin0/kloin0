@@ -53,4 +53,5 @@ if opção == 5:
         print(f'octal {oct(num)[2:]}')
     elif opção2 == 3:
         print(f'hexadecimal {hex(num)[2:]}')
+print('=-'*50)
 print('Até mais...')
