@@ -1,5 +1,9 @@
+# o Codigo não esta pronto
+# Preciso adicinar a api 
 from hashlib import sha256
 import time 
+import requests 
+import json 
 def apli_sha256(texto): 
     return sha256("abc".encode("ascii")).hexdigest()
 
