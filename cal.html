@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculadora</title>
+	<style>
+		*{
+			/* Para a largura nao ser influenciado por panggin na margin*/
+			box-sizing: border-box;
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: bold;
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			/* Paleta de cores */
+			/* #6A0080 ; #E14DFF; #D301FF; #712680; #AA00CC*/
+			background-image: linear-gradient(to right,#3E376D,#9FA4C4,#1ACA27,#8BD388,#000000);
+		}
+		.grid-container{
+			display: grid;
+			justify-content: center;
+			align-content: center;
+			min-height: 100vh;
+			grid-template-columns: repeat(4,100px);
+			grid-template-rows: minmax(120px,auto) repeat(5,100px);
+
+		}
+		.grid-container > button{
+			cursor: pointer;
+			font-size: 2rem;
+			border: none;
+			outline:none;
+			background-color: #000000;
+			color: #FFFF;
+		}
+		.grid-container > button:hover{
+			background-color: white;
+			color: #000000;
+		}
+		.grid-container > .operation{
+			background: #1ACA27;
+		}
+		.span-two{
+			grid-column:span 2;
+		}
+		.grid-container > .output{
+			grid-column: 1/-1;
+			background-color: #222;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: space-around;
+			padding: 10px;
+			word-wrap: break-word;
+			word-break: break-all;
+		}
+		.grid-container > .output > .previous-operand{
+			color: white;
+			/* tamanho fa font*/
+			font-size: 1.5rem;
+		}
+		.grid-container > .output > .current-operand{
+			color: white;
+			font-size: 2.5rem;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="grid-container">
+		<div class="output">
+			<!--Esse é o resultado da operação anterior-->
+			<div data-previous-operand class="previous-operand">
+				<!--Esse é o que faz o numero aprarecer na tela-->
+			</div>
+				<div data-current-operand class="current-operand">
+				</div>
+		</div>
+		<button data-all-clear class="span-two">AC</button>
+		<button data-delet>DEL</button>
+		<button data-operation class="operation">÷</button>
+		<button data-number>1</button>
+		<button data-number>2</button>
+		<button data-number>3</button>
+		<button data-operation class="operation">*</button>
+		<button data-number>4</button>
+		<button data-number>5</button>
+		<button data-number>6</button>
+		<button data-operation class="operation">+</button>
+		<button data-number>7</button>
+		<button data-number>8</button>
+		<button data-number>9</button>
+		<button data-number class="operation">-</button>
+		<button  data-number class="span-two">.</button>
+		<button data-number>0</button>
+		<button data-equals class="operation">=</button>
+
+	</div>
+	<script src="cal.js"></script>
+</body>
+</html>
