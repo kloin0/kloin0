@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+    <style>
+        body{
+            background-color: aliceblue;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        .heading{
+            font-family: 'Times New Roman', Times, serif;
+            margin: 35px auto 20px;
+        }
+        hr{
+            border-top: 2px solid black;
+            width: 40%;
+            margin-bottom: 55px;
+        }
+        .main{
+            width: 50vw;
+            margin: auto;
+            padding: 30px;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+        label{
+            font-size: 20px;
+        }
+        .btn{
+            width: 200px;
+        }
+        #quantidadeFinal{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: none;
+            margin: 50px auto;
+        }
+        #quantidadeFinal{
+            font-size: 50px;
+        }
+        .valorFinal{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        @media(max-width: 768px){
+            hr{
+                width: 60%;
+            }
+            .main{
+                width: 100%;
+            }
+        }
+    @media(max-width: 400px){
+        .heading{
+            font-size: 60px;
+        }
+        hr{
+            width: 75%;
+        }
+        #quantidadeFinal h2, .valorFinal{
+            font-size: 40px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!--Conversor de Moedas-->
+    <h1 class="heading text-center display-2">Conversor de Moedas</h1>
+    <hr>
+    <div class="container">
+        <div class="main">
+            <div class="Para-Grupo">
+                <label for="oamount">
+                    Quantidade Convertida
+                </label>
+                <input type="text"
+                class="from-control searchBox"
+                placeholder="0.00"
+                id="oamount">
+            </div>
+            <div class="fileira">
+                <div class="col-sm-6">
+                    <div class="grupo-input mb-3">
+                        <div class="grupo-input-propend">
+                            <span class="grupo-input-text">De</span>
+                        </div>
+                        <select class="para-controle from" id="sel1">
+                            <option value="">Selecione Uma</option>
+                            <option value="USD">USD</option>
+                            <option value="AED">AED</option>
+                            <option value="ARS">ARS</option>
+                            <option value="AUD">AUD</option>
+                            <option value="BGN">BGN</option>
+                            <option value="BRL">BRL</option>
+                            <option value="BSD">BSD</option>
+                            <option value="CAD">CAD</option>
+                            <option value="CHF">CHF</option>
+                            <option value="CLP">CLP</option>
+                            <option value="CNY">CNY</option>
+                            <option value="COP">COP</option>
+                            <option value="CZK">CZK</option>
+                            <option value="DKK">DKK</option>
+                            <option value="DOP">DOP</option>
+                            <option value="EGP">EGP</option>
+                            <option value="EUR">EUR</option>
+                            <option value="FJD">FJD</option>
+                            <option value="GBP">GBP</option>
+                            <option value="GTQ">GTQ</option>
+                            <option value="HKD">HKD</option>
+                            <option value="HRK">HRK</option>
+                            <option value="HUF">HUF</option>
+                            <option value="IDR">IDR</option>
+                            <option value="ILS">ILS</option>
+                            <option value="INR">INR</option>
+                            <option value="ISK">ISK</option>
+                            <option value="JPY">JPY</option>
+                            <option value="KRW">KRW</option>
+                            <option value="KZT">KZT</option>
+                            <option value="MVR">MVR</option>
+                            <option value="MXN">MXN</option>
+                            <option value="MYR">MYR</option>
+                            <option value="NOK">NOK</option>
+                            <option value="NZD">NZD</option>
+                            <option value="PAB">PAB</option>
+                            <option value="PEN">PEN</option>
+                            <option value="PHP">PHP</option>
+                            <option value="PKR">PKR</option>
+                            <option value="PLN">PLN</option>
+                            <option value="PYG">PYG</option>
+                            <option value="RON">RON</option>
+                            <option value="RUB">RUB</option>
+                            <option value="SAR">SAR</option>
+                            <option value="SEK">SEK</option>
+                            <option value="SGD">SGD</option>
+                            <option value="THB">THB</option>
+                            <option value="TRY">TRY</option>
+                            <option value="TWD">TWD</option>
+                            <option value="UAH">UAH</option>
+                            <option value="UYU">UYU</option>
+                            <option value="ZAR">ZAR</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="grupo-input mb-3">
+                        <div class="grupo-input-propend">
+                            <span class="grupo-input-text">Para</span>
+                        </div>
+                        <select class="grupo-input to">
+                            <option value="">Selecione Uma</option>
+                            <option value="USD">USD</option>
+                            <option value="AED">AED</option>
+                            <option value="ARS">ARS</option>
+                            <option value="AUD">AUD</option>
+                            <option value="BGN">BGN</option>
+                            <option value="BRL">BRL</option>
+                            <option value="BSD">BSD</option>
+                            <option value="CAD">CAD</option>
+                            <option value="CHF">CHF</option>
+                            <option value="CLP">CLP</option>
+                            <option value="CNY">CNY</option>
+                            <option value="COP">COP</option>
+                            <option value="CZK">CZK</option>
+                            <option value="DKK">DKK</option>
+                            <option value="DOP">DOP</option>
+                            <option value="EGP">EGP</option>
+                            <option value="EUR">EUR</option>
+                            <option value="FJD">FJD</option>
+                            <option value="GBP">GBP</option>
+                            <option value="GTQ">GTQ</option>
+                            <option value="HKD">HKD</option>
+                            <option value="HRK">HRK</option>
+                            <option value="HUF">HUF</option>
+                            <option value="IDR">IDR</option>
+                            <option value="ILS">ILS</option>
+                            <option value="INR">INR</option>
+                            <option value="ISK">ISK</option>
+                            <option value="JPY">JPY</option>
+                            <option value="KRW">KRW</option>
+                            <option value="KZT">KZT</option>
+                            <option value="MVR">MVR</option>
+                            <option value="MXN">MXN</option>
+                            <option value="MYR">MYR</option>
+                            <option value="NOK">NOK</option>
+                            <option value="NZD">NZD</option>
+                            <option value="PAB">PAB</option>
+                            <option value="PEN">PEN</option>
+                            <option value="PHP">PHP</option>
+                            <option value="PKR">PKR</option>
+                            <option value="PLN">PLN</option>
+                            <option value="PYG">PYG</option>
+                            <option value="RON">RON</option>
+                            <option value="RUB">RUB</option>
+                            <option value="SAR">SAR</option>
+                            <option value="SEK">SEK</option>
+                            <option value="SGD">SGD</option>
+                            <option value="THB">THB</option>
+                            <option value="TRY">TRY</option>
+                            <option value="TWD">TWD</option>
+                            <option value="UAH">UAH</option>
+                            <option value="UYU">UYU</option>
+                            <option value="ZAR">ZAR</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <!--Conversao em button-->
+                <button class="btn btn-primeiro convert m-2" type="submit">
+                    Converter 
+                </button>
+                <!--Resetar o button-->
+                <button class="btn btn-primeiro m-2"
+                onclick="clearVal()">Resetar</button>
+            </div>
+        </div>
+        <div id="quantidadeFinal" class="text-center">
+            <!--Exibir o valor convertido-->
+            <h2>Converter Quantidade
+                <span class="valorFinal"
+                style="color:green">
+            </span>
+            </h2>
+        </div>
+    </div>
+
+    <script src="conversor.js"></script>
+</body>
+</html>
