@@ -4,7 +4,7 @@ import requests
 import json
 tela = Tk()
 tela.geometry('600x600')
-# Pagar a api 
+# Pagar a api
 cont = requests.get("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL")
 cont = cont.json()
 cont_euro = cont ['EURBRL']["bid"]
