@@ -3,14 +3,16 @@ print('''
 [1] = Bhaskara
 [2] = Fatorial
 [3] = Sequencia de Fibonaci
+[4] = Analise combinatoria
 ''')
 escolha = int(input('Escolha uma: '))
-print('''
-#----------------------------------------------------#
-                    Contas Básicas                  
-#----------------------------------------------------#
-''')
 if escolha == 0:
+    print('''
+    #----------------------------------------------------#
+                        Contas Básicas                  
+    #----------------------------------------------------#
+    ''')
+
     ssmdp = input('+\n-\nX\n/\n²\n') 
     if ssmdp == '+':
         num0 = input('>>> ') 
@@ -32,12 +34,12 @@ if escolha == 0:
         num1 = input('>>> ') 
         potenci = num0 ** num1 
         print(potenci) 
-print('''
-#----------------------------------------------------# 
-                    Bhaskara                        
-#----------------------------------------------------#
-''')
 if escolha == 1:
+    print('''
+    #----------------------------------------------------# 
+                        Bhaskara                        
+    #----------------------------------------------------#
+    ''')
     print('ax²+bx+c=0') 
     a = int(input('O valor de A: ')) 
     b = int(input('O valor de B: ')) 
@@ -47,13 +49,13 @@ if escolha == 1:
     raizQuadradaDoDelta = delta ** (1/2) 
     x1 = (-b - raizQuadradaDoDelta) / divisor
     x2 = (-b + raizQuadradaDoDelta) / divisor
-    print(x1,x2) 
-print('''
-#--------------------------------------------------#
-                    Fatorial                      
-#--------------------------------------------------#
-''')
+    print(x1,x2)
 if escolha == 2:
+    print('''
+    #--------------------------------------------------#
+                        Fatorial                      
+    #--------------------------------------------------#
+    ''')
     m = int(input('Digite um numero: ')) 
     c = m 
     f = 1 
@@ -63,12 +65,12 @@ if escolha == 2:
         f = f*c 
         c -= 1 
     print(f'{f}')
-print('''
-#---------------------------------------------------#
-               Sequencia de Fibonaci                     
-#---------------------------------------------------#
-''')
 if escolha == 3:
+    print('''
+    #---------------------------------------------------#
+                   Sequencia de Fibonaci                     
+    #---------------------------------------------------#
+    ''')
     numero = int(input('>>> '))
     num0,num1 = 0,1
     print(num0,num1) 
@@ -80,3 +82,38 @@ if escolha == 3:
         num1 = num2 
         cont += 1 
     print('-'*30,end=' ')
+if escolha == 4:
+    print('''
+    #---------------------------------------------------#
+                     Analise combinatoria
+    #---------------------------------------------------#
+    ''')
+    analise = int(input('''
+        [0] = Combinacao
+        [1] = Arranjo
+        [2] = Permutacao 
+        [3] = Permutacao com repeticao 
+        '''))
+    if analise == 0:
+        n = int(input('>>>: ')) 
+        p = int(input('>>>: ')) 
+        c = n 
+        f = 1
+        while c > 0:
+            f = f * c
+            c -= 1 
+        sub = n - p 
+        g = sub 
+        h = 1 
+        while g > 0:
+            h = h * g 
+            g -= 1 
+        r = p
+        y = 1
+        while r > 0:
+            y = y * r 
+            r -= 1
+        divisao0 = f / y 
+        divisao1 = divisao0 / h 
+        print(divisao1) 
+        
