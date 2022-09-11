@@ -49,8 +49,5 @@ tela_dollar = Label(
 ).pack()
 visor_dolar = Entry(tela,bg="gray")
 visor_dolar.pack(padx=100,pady=12)
-# Uma função para converter as moedas
-
-# Criar um button para realizar a coversão 
 
 tela.mainloop()
