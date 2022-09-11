@@ -5,7 +5,7 @@ tela.title("Login em Python")
 def click_button():
     login = edemail.get()
     senha = edsenha.get() 
-    if login == "gustavohenrique@gmail.com" and senha == "g1u2s3t4":
+    if login == "gustavohenrique@gmail.com" and senha == "12345":
         lb = Label(tela,text="Bem vindo")
         lb.grid(row=4, column=1) 
     else:
