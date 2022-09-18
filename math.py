@@ -116,4 +116,17 @@ if escolha == 4:
         divisao0 = f / y 
         divisao1 = divisao0 / h 
         print(divisao1) 
-        
+    if analise == 1:
+        n = int(input('>>>: ')) 
+        p = int(input('>>>: ')) 
+        c = n 
+        f = 1 
+        while c > 0:
+            f = f * c 
+            c -= 1 
+        sub = n - p 
+        g = sub 
+        h = 1 
+        while g > 0:
+            h = h * g 
+            g -= 1 

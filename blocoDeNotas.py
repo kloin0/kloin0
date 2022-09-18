@@ -75,7 +75,8 @@ class Notepad():
         self.thisTextArea.delete(1.0,END)
     def saveFile(self):
         if self.file== None:
-            self.file = askopenfilename(initialfile="Untitled.txt",defaultextension=".txt",filetypes=[("All Files","*.*"),("Text Documents","*.txt")])
+            self.file = askopenfilename(initialfile="Untitled.txt",defaultextension=".txt",filetypes=[("All Files","*.*"),
+            ("Text Documents","*.txt")])
                 
             if self.file == "":
                 self.file = None 
