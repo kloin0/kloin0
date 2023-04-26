@@ -10,6 +10,6 @@ Tenho 3 anos de experência em Python
 
 Trabalho como freelancer, essas são as plataformas que eu faço parte 
 
-workana = https://www.workana.com/freelancer/fa74b55a806cd619254863d1d705d779
+workana = https://www.workana.com/freelancer/c7bb99e27fbaca2d46e3c2d975164383
 
 99freelas = https://www.99freelas.com.br/user/gustavohenrique-68
