@@ -1,7 +1,9 @@
 c++ 
-Python 
-Java 
-Front end 
+
+Python  
+
+Front-End 
+
 Machine learning 
+
 Data science 
-Mojo
