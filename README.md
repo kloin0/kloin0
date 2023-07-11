@@ -2,8 +2,8 @@ c++
 
 Python  
 
-Front-End 
-
 Machine learning 
 
 Data science 
+
+Banco de dados
